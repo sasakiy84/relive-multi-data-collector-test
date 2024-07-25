@@ -12,9 +12,9 @@ import (
 )
 
 func Dump(resultDir string) error {
-	DATABASE_URL, ok := os.LookupEnv("POSTGRES_URL")
+	DATABASE_URL, ok := os.LookupEnv("POSTGRESQL_URL")
 	if !ok {
-		return fmt.Errorf("POSTGRES_URL is not set")
+		return fmt.Errorf("POSTGRESQL_URL is not set")
 	}
 
 	dbCtx := context.Background()

@@ -61,10 +61,10 @@ LEFT JOIN LATERAL (
         thumbnails.youtube_video_id = videos.youtube_video_id
     ORDER BY
         CASE 
-            WHEN thumbnails.type = 'default' THEN 1
+            WHEN thumbnails.type = 'default' THEN 4
             WHEN thumbnails.type = 'medium' THEN 2
             WHEN thumbnails.type = 'high' THEN 3
-            WHEN thumbnails.type = 'standard' THEN 4
+            WHEN thumbnails.type = 'standard' THEN 1
             WHEN thumbnails.type = 'maxres' THEN 5
             ELSE 99
         END
